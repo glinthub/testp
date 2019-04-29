@@ -1,0 +1,24 @@
+<xml>
+    <interface name="Dcm_ProcessRequestDownloadCallback" returntype="int32" server="mm" client="xl4">
+        <param name="OpStatus" type="uint8"/>
+        <param name="DataFormatIdentifier" type="uint8"/>
+        <param name="MemoryAddress" type="uint32"/>
+        <param name="MemorySize" type="uint32"/>
+        <param out="1" name="BlockLength" type="uint32"/>
+        <param out="1" name="ErrorCode" type="uint8"/>
+    </interface>
+    <interface name="doip_start_server" returntype="int32" server="xl4" client="mm">
+        <param name="did" type="uint32"/>
+        <param out="1" name="data" type="Buffer" length="-1"/>
+        <param out="1" name="length" type="uint16"/>
+    </interface>
+
+    <node name="xl4" id="1" type="socket">
+        <socket addr="127.1" port="12300"/>
+    </node>
+    <node name="mm" id="2" type="socket">
+        <socket addr="127.1" port="12301"/>
+    </node>
+</xml>
+
+  

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>12</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>264</y>
+      <w>180</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>TestFile
+--
+localPath:　String
+--
+remoteAddr:　String
+--
+remotePath:　String
+--
+deployed : boolean
+--
+/deploy()/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>696</x>
+      <y>444</y>
+      <w>168</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>TestCase
+--
+cmds : TestCmd[]
+--
+exec()
+--
+/verify()/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>288</x>
+      <y>240</y>
+      <w>204</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>TestSuite
+--
+files: TestFile[]
+--
+cases: TestCase[]
+--
+setup()
+--
+exec()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>264</y>
+      <w>240</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>480</x>
+      <y>300</y>
+      <w>240</w>
+      <h>180</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>960</x>
+      <y>468</y>
+      <w>168</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>TestCmd
+--
+cmd : String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>852</x>
+      <y>468</y>
+      <w>132</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>
